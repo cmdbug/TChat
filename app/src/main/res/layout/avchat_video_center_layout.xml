@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/avchat_call_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/avchat_video_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal" />
+
+    <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/avchat_video_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text=""
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+    <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/avchat_video_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:text="@string/avchat_video_call_request"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="50dp"
+            >
+
+        <include
+                android:id="@+id/avchat_video_refuse_receive"
+                layout="@layout/avchat_refuse_receive_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                />
+
+    </RelativeLayout>
+
+</LinearLayout>

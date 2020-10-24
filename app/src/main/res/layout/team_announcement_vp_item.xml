@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nim_message_activity_top_tip"
+    android:padding="15dip">
+
+    <TextView
+        android:id="@+id/announce_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team_announce_title"
+        android:textColor="@color/color_yellow_796413"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/announce_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/announce_title"
+        android:layout_marginTop="3dip"
+        android:ellipsize="end"
+        android:text="@string/team_announce_content"
+        android:textColor="@color/color_yellow_b39729"
+        android:textSize="@dimen/text_size_13" />
+</RelativeLayout>

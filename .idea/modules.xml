@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/nim_demo.iml" filepath="$PROJECT_DIR$/nim_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Transferee/nim_demo.Transferee.iml" filepath="$PROJECT_DIR$/.idea/modules/Transferee/nim_demo.Transferee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/nim_demo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/nim_demo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/awesomeqrcode/nim_demo.awesomeqrcode.iml" filepath="$PROJECT_DIR$/.idea/modules/awesomeqrcode/nim_demo.awesomeqrcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/camera/nim_demo.camera.iml" filepath="$PROJECT_DIR$/.idea/modules/camera/nim_demo.camera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logreport/nim_demo.logreport.iml" filepath="$PROJECT_DIR$/.idea/modules/logreport/nim_demo.logreport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/picselector/nim_demo.picselector.iml" filepath="$PROJECT_DIR$/.idea/modules/picselector/nim_demo.picselector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/qrcodecore/nim_demo.qrcodecore.iml" filepath="$PROJECT_DIR$/.idea/modules/qrcodecore/nim_demo.qrcodecore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recovery/nim_demo.recovery.iml" filepath="$PROJECT_DIR$/.idea/modules/recovery/nim_demo.recovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swipebackhelper/nim_demo.swipebackhelper.iml" filepath="$PROJECT_DIR$/.idea/modules/swipebackhelper/nim_demo.swipebackhelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ucrop/nim_demo.ucrop.iml" filepath="$PROJECT_DIR$/.idea/modules/ucrop/nim_demo.ucrop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uikit/nim_demo.uikit.iml" filepath="$PROJECT_DIR$/.idea/modules/uikit/nim_demo.uikit.iml" />
+    </modules>
+  </component>
+</project>

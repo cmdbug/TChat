@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_item_redpacked_detail_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|top"
+    android:paddingLeft="2dp"
+    android:paddingRight="0dp"
+    android:paddingTop="7dp">
+
+    <ImageView
+        android:id="@+id/message_item_redpacked_icon_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="false"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/message_item_redpacked_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/message_item_redpacked_icon_image"
+        android:autoLink="none"
+        android:maxLines="1"
+        android:maxWidth="160dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/message_item_redpacked_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_below="@id/message_item_redpacked_name_label"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/message_item_redpacked_icon_image"
+        android:autoLink="none"
+        android:maxLines="1"
+        android:maxWidth="160dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/message_item_redpacked_from_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="2dp"
+        android:autoLink="none"
+        android:maxLines="1"
+        android:maxWidth="160dp"
+        android:text=""
+        android:textColor="@android:color/darker_gray"
+        android:textSize="13sp" />
+
+</RelativeLayout>

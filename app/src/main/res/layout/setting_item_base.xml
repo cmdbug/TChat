@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/isetting_item_height"
+    android:background="@drawable/nim_semitransparency_selector"
+    android:paddingRight="@dimen/isetting_item_padding_right">
+
+    <ImageView
+        android:id="@+id/settings_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="44dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dip"
+        android:contentDescription="@string/empty"
+        android:scaleType="center" />
+
+    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+        android:id="@+id/head_image"
+        android:layout_width="@dimen/avatar_size_default"
+        android:layout_height="@dimen/avatar_size_default"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/settings_item_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/head_image"
+        android:textColor="@color/color_black_ff333333"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/head_image"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/head_title_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_ff333333"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/head_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/title_label"
+        android:gravity="right">
+
+        <com.netease.nim.uikit.common.ui.widget.SwitchButton
+            android:id="@+id/setting_item_toggle"
+            android:layout_width="58dip"
+            android:layout_height="36.67dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detail_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dip"
+        android:layout_toRightOf="@+id/title_label"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tip_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="4dip"
+        android:paddingTop="4dip"
+        android:textColor="@color/color_black_ff999999"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/setting_item_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="44dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/empty"
+        android:scaleType="center"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/horizontal_light_thin_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/settings_item_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

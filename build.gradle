@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = ANDROID_BUILD_SDK_VERSION as int
+    buildToolsVersion = ANDROID_BUILD_TOOLS_VERSION
+    minSdkVersion = ANDROID_BUILD_MIN_SDK_VERSION as int
+    targetSdkVersion = ANDROID_BUILD_TARGET_SDK_VERSION as int
+    versionCode = ANDROID_BUILD_VERSION_CODE as int
+    versionName = ANDROID_BUILD_VERSION_NAME
+    targetCompatibility = ANDROID_BUILD_TARGET_COMPATIBILITY
+    sourceCompatibility = ANDROID_BUILD_SOURCE_COMPATIBILITY
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nim_contact_list_item_selecter"
+    android:minHeight="50dip" >
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="@dimen/avatar_size_in_contact1"
+        android:layout_height="@dimen/avatar_size_in_contact1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_secretary" />
+
+    <TextView
+        android:id="@+id/tv_func_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/img_head"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="系统功能"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tab_new_msg_label"
+        android:layout_toRightOf="@id/tv_func_name"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dip"
+        android:background="@drawable/nim_g_unread_badge"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/bottomLine"
+        style="@style/horizontal_light_thin_divider1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

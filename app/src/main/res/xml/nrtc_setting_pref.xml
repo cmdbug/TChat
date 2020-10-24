@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/nrtc_setting_voe">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/nrtc_setting_voe_call_proximity_key"
+            android:summary="在语音通话时开启距离传感器"
+            android:title="@string/nrtc_setting_voe_call_proximity"/>
+
+        <ListPreference
+            android:defaultValue="2"
+            android:entries="@array/nrtc_setting_voe_audio_effect_entries"
+            android:entryValues="@array/nrtc_setting_voe_audio_effect_values"
+            android:key="@string/nrtc_setting_voe_audio_aec_key"
+            android:title="@string/nrtc_setting_voe_audio_aec"/>
+
+
+        <ListPreference
+            android:defaultValue="2"
+            android:entries="@array/nrtc_setting_voe_audio_effect_entries"
+            android:entryValues="@array/nrtc_setting_voe_audio_effect_values"
+            android:key="@string/nrtc_setting_voe_audio_ns_key"
+            android:title="@string/nrtc_setting_voe_audio_ns"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/nrtc_setting_voe_dtx_key"
+            android:summary="检测人声非活跃状态时减少数据包的发送"
+            android:title="@string/nrtc_setting_voe_dtx"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/nrtc_setting_voe_high_quality_key"
+            android:summary="高采样率语音数据"
+            android:title="@string/nrtc_setting_voe_high_quality"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/nrtc_setting_vie">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/nrtc_setting_vie_crop_ratio_entries"
+            android:entryValues="@array/nrtc_setting_vie_crop_ratio_values"
+            android:key="@string/nrtc_setting_vie_crop_ratio_key"
+            android:title="@string/nrtc_setting_vie_crop_ratio" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/nrtc_setting_vie_rotation_key"
+            android:summary="通话时参考自己和对方设备角度旋转画面"
+            android:title="@string/nrtc_setting_vie_rotation"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/nrtc_setting_vie_default_front_camera_key"
+            android:summary="在视频通话时优先采用前置摄像头"
+            android:title="@string/nrtc_setting_vie_default_front_camera"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/nrtc_setting_vie_fps_reported_key"
+            android:summary="在视频通话时是否汇报帧率"
+            android:title="@string/nrtc_setting_vie_fps_reported"/>
+
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number"
+            android:key="@string/nrtc_setting_vie_max_bitrate_key"
+            android:title="@string/nrtc_setting_vie_max_bitrate"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/nrtc_setting_vie_hw_encoder_entries"
+            android:entryValues="@array/nrtc_setting_vie_hw_encoder_values"
+            android:key="@string/nrtc_setting_vie_hw_encoder_key"
+            android:title="@string/nrtc_setting_vie_hw_encoder"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/nrtc_setting_vie_hw_decoder_entries"
+            android:entryValues="@array/nrtc_setting_vie_hw_decoder_values"
+            android:key="@string/nrtc_setting_vie_hw_decoder_key"
+            android:title="@string/nrtc_setting_vie_hw_decoder"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/nrtc_setting_vie_quality_entries"
+            android:entryValues="@array/nrtc_setting_vie_quality_values"
+            android:key="@string/nrtc_setting_vie_quality_key"
+            android:title="@string/nrtc_setting_vie_quality"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/nrtc_setting_other">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/nrtc_setting_other_device_rotation_entries"
+            android:entryValues="@array/nrtc_setting_other_device_rotation_values"
+            android:key="@string/nrtc_setting_other_device_default_rotation_key"
+            android:title="@string/nrtc_setting_other_device_default_rotation"/>
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/nrtc_setting_other_device_rotation_entries"
+            android:entryValues="@array/nrtc_setting_other_device_rotation_values"
+            android:key="@string/nrtc_setting_other_device_rotation_fixed_offset_key"
+            android:title="@string/nrtc_setting_other_device_rotation_fixed_offset"/>
+
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/nrtc_setting_other_server_record_audio_key"
+            android:summary="在服务器录制通话内容(需要额外配置)"
+            android:title="@string/nrtc_setting_other_server_record_audio"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/nrtc_setting_other_server_record_video_key"
+            android:summary="在服务器录制通话内容(需要额外配置)"
+            android:title="@string/nrtc_setting_other_server_record_video"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/nrtc_setting_other_webrtc_compat_key"
+            android:summary="支持Web端通过WebRTC模式互通"
+            android:title="@string/nrtc_setting_other_webrtc_compat"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

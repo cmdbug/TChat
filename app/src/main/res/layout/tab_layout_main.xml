@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/background_tab"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+            android:id="@+id/re_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="1dp">
+
+        <ImageView
+                android:id="@+id/tab_title_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_logo"/>
+        <TextView
+                android:id="@+id/tab_title_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/action_bar_tittle_color_555555"
+                android:textSize="12sp"
+                android:layout_below="@id/tab_title_icon"/>
+
+        <ImageView
+                android:id="@+id/tab_new_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:contentDescription="@string/empty"
+                android:src="@drawable/nim_main_tab_new_message_notify"
+                android:visibility="gone"/>
+
+        <com.netease.nim.uikit.common.ui.drop.DropFake
+                android:id="@+id/tab_new_msg_label"
+                android:layout_width="28dip"
+                android:layout_height="28dip"
+                android:layout_marginLeft="32dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

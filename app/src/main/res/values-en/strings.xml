@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">藤信</string>
+    <string name="nim_status_bar_audio_message">received an audio message from %1$s</string>
+    <string name="nim_status_bar_custom_message">received a custom message from %1$s</string>
+    <string name="nim_status_bar_file_message">received a file from %1$s</string>
+    <string name="nim_status_bar_location_message">%1$s shared a location message</string>
+    <string name="nim_status_bar_multi_messages_incoming">received messages from %1$d contacts</string>
+    <string name="nim_status_bar_notification_message">%1$s: notification</string>
+    <string name="nim_status_bar_image_message">received a picture from %1$s</string>
+    <string name="nim_status_bar_ticker_text">received a message from %1$s</string>
+    <string name="nim_status_bar_unsupported_message">%1$s: unsupported message type</string>
+    <string name="nim_status_bar_video_message">received a video message from %1$s</string>
+    <string name="nim_status_bar_hidden_msg_content">you received a new message</string>
+</resources>

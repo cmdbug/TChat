@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_background"
+              android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/team_member_more_grid"
+        style="@style/grid_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"
+        android:layout_marginTop="20dip"
+        android:scrollbarStyle="outsideOverlay"
+        android:verticalSpacing="16dip">
+    </GridView>
+
+</LinearLayout>

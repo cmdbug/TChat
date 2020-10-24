@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/re_friends"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="00dp"
+        android:background="@drawable/dialog_btn_selector"
+        android:clickable="true"
+        android:paddingLeft="12dp"
+        android:paddingStart="12dp">
+
+
+        <ImageView
+            android:id="@+id/iv_friends"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/find_friends" />
+
+        <TextView
+            android:id="@+id/tv_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/iv_friends"
+            android:layout_toRightOf="@+id/iv_friends"
+            android:text="标题"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_new_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:layout_marginStart="10dip"
+            android:layout_toEndOf="@+id/tv_friends"
+            android:layout_toRightOf="@+id/tv_friends"
+            android:background="@drawable/nim_g_unread_badge"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_new"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/avatar_def"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_new_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/iv_new"
+            android:layout_toStartOf="@+id/iv_new"
+            android:text="新的提示消息" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@drawable/dialog_btn_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#dadada" />
+    </RelativeLayout>
+
+</LinearLayout>

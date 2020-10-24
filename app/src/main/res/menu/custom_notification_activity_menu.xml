@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/send_custom_notification"
+        android:icon="@drawable/action_bar_black_more_icon"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/send_custom_notification_to_buddy"
+                android:title="@string/send_custom_notification_to_buddy"/>
+            <item
+                android:id="@+id/send_custom_notification_to_team"
+                android:title="@string/send_custom_notification_to_team"/>
+        </menu>
+    </item>
+</menu>

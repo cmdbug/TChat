@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multi_select_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/multi_select_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <include
+            android:id="@+id/multi_select_dialog_title_view"
+            layout="@layout/multi_select_dialog_title" />
+
+        <TextView
+            android:id="@+id/multi_select_dialog_message_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="@dimen/dialog_text_margin_horizontal"
+            android:textColor="@color/color_black_333333"
+            android:textSize="@dimen/very_samll_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/multi_select_dialog_message_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:textSize="12dp" />
+
+        <ListView
+            android:id="@+id/multi_select_dialog_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:divider="@null"
+            android:fadingEdge="none" />
+
+        <include layout="@layout/multi_select_dialog_bottom_button" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- chat room -->
+    <string name="chat_room">直播间</string>
+    <string name="chat_room_message">直播互动</string>
+    <string name="chat_room_master">主播</string>
+    <string name="chat_room_online_people">在线成员</string>
+    <string name="chat_room_announcement">直播公告</string>
+    <string name="no_announcement">暂无公告</string>
+    <string name="online">正在直播</string>
+    <string name="chatroom_kick_member">踢人</string>
+    <string name="chatroom_muted">禁言</string>
+    <string name="chatroom_blacklist">拉黑该用户</string>
+    <string name="move_out_blacklist">移出黑名单</string>
+    <string name="chatroom_set_admin">任命管理员</string>
+    <string name="cancel_admin">取消管理员</string>
+    <string name="set_normal_member">设为普通成员</string>
+    <string name="cancel_normal_member">移出普通成员</string>
+    <string name="set_temp_mute_notify">设置临时禁言(含通知)</string>
+    <string name="set_temp_mute_not_notify">设置临时禁言(不通知)</string>
+    <string name="mute_duration">禁言时间，单位s</string>
+    <string name="chatroom_fetch_member_failed">获取用户资料失败</string>
+    <string name="cancel_muted">取消禁言</string>
+    <string name="set_success">设置成功</string>
+    <string name="mark_member_level">设置成员等级</string>
+    <string name="set_level">设置等级</string>
+    <string name="cancel_level">取消等级</string>
+    <string name="no_data">暂无数据</string>
+    <string name="internet_broken">网络断开</string>
+</resources>

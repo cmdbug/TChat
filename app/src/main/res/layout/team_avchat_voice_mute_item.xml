@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/bubble_padding_top"
+              android:paddingLeft="@dimen/bubble_padding_left"
+              android:paddingRight="@dimen/bubble_padding_left"
+              android:paddingTop="@dimen/bubble_padding_top"
+    >
+
+    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+        android:id="@+id/head_image"
+        android:layout_width="@dimen/avatar_size_in_contact"
+        android:layout_height="@dimen/avatar_size_in_contact"/>
+
+    <TextView
+        android:id="@+id/tv_nick_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dialog_text_margin_horizontal"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/normal_text_size"/>
+
+    <ImageView
+        android:id="@+id/img_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

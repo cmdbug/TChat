@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multiport_notify_bar"
+    android:layout_width="fill_parent"
+    android:background="@color/color_background"
+    android:layout_height="40dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_multiport"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/multiport_desc_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/color_grey_888888"
+        android:drawableRight="@drawable/nim_arrow_right"
+        android:paddingRight="10dp"
+        android:textSize="@dimen/text_size_14" />
+
+</LinearLayout>

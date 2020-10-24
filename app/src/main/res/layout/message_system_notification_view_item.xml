@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/top_line"
+        style="@style/horizontal_light_thin_divider"
+        android:layout_marginLeft="70dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/from_account_head_image"
+            android:layout_width="@dimen/avatar_size_default"
+            android:layout_height="@dimen/avatar_size_default"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <LinearLayout
+            android:id="@+id/operator_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/agree"
+                android:layout_width="54dip"
+                android:layout_height="34dip"
+                android:background="@drawable/nim_team_create_btn_selector"
+                android:text="@string/agree"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/reject"
+                android:layout_width="54dip"
+                android:layout_height="34dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/nim_red_round_button_selector"
+                android:text="@string/reject"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/operator_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:text="已处理"
+                android:textColor="@color/color_black_333333"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/title_content_layout"
+            android:layout_toRightOf="@id/from_account_head_image"
+            android:layout_toLeftOf="@id/operator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip">
+
+            <TextView
+                android:id="@+id/from_account_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bubble_name_layout_margin_bottom"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="name"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/notification_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/from_account_text"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/from_account_text"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="time"
+                android:textColor="@color/color_aaaaaa_content_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_account_text"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/bubble_margin_top"
+                android:ellipsize="end"
+                android:gravity="center_vertical|left"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="3dip"
+                android:singleLine="true"
+                android:text="content"
+                android:textColor="@color/color_aaaaaa_content_text"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        style="@style/horizontal_light_thin_divider"
+        android:layout_marginLeft="70dp" />
+
+</LinearLayout>

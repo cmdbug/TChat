@@ -1,0 +1,12 @@
+include ':app'
+include ':uikit'
+include ':ucrop'
+include ':picselector'
+include ':camera'
+include ':swipebackhelper'
+include ':qrcodecore'
+include ':awesomeqrcode'
+include ':recovery'
+include ':logreport'
+include ':Transferee'
+

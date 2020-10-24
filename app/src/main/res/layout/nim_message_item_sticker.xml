@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_height="@dimen/mask_sticker_bubble_width"
+        android:layout_width="@dimen/mask_sticker_bubble_width">
+
+        <ImageView
+            android:id="@+id/message_item_sticker_image"
+            android:layout_width="@dimen/mask_sticker_bubble_width"
+            android:layout_height="@dimen/mask_sticker_bubble_width"
+            android:visibility="visible"/>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/message_item_sticker_gif"
+            android:layout_width="@dimen/mask_sticker_bubble_width"
+            android:layout_height="@dimen/mask_sticker_bubble_width"
+            android:visibility="gone"/>
+    </FrameLayout>
+</merge>

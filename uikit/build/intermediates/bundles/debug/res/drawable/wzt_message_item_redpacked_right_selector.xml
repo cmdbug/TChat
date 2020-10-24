@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/c2c_chatto_bg_pressed" android:state_pressed="true"/>
+    <item android:drawable="@drawable/c2c_chatto_bg_normal"/> <!-- default -->
+
+</selector>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar.TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:titleTextAppearance="@style/Toolbar.TitleText">
+
+                <include layout="@layout/nim_action_bar_right_clickable_tv" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp">
+
+            <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+                android:id="@+id/user_head_image"
+                android:layout_width="@dimen/avatar_size_in_profile"
+                android:layout_height="@dimen/avatar_size_in_profile"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/user_head_image"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nick_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/gender_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/nim_male" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/user_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/user_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@+id/attribute"
+            android:background="@color/color_split_line_d9d9d9" />
+
+        <include
+            android:id="@+id/alias"
+            layout="@layout/user_profile_item"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/birthday"
+            layout="@layout/user_profile_item" />
+
+        <include
+            android:id="@+id/phone"
+            layout="@layout/user_profile_item" />
+
+        <include
+            android:id="@+id/email"
+            layout="@layout/user_profile_item" />
+
+        <include
+            android:id="@+id/signature"
+            layout="@layout/user_profile_item" />
+
+
+        <LinearLayout
+            android:id="@+id/toggle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/operate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="30dp">
+
+            <Button
+                android:id="@+id/begin_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/nim_team_create_btn_selector"
+                android:minHeight="50dp"
+                android:text="@string/begin_chat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/remove_buddy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@drawable/nim_white_round_button_selector"
+                android:minHeight="50dp"
+                android:text="@string/remove_friend"
+                android:textColor="@color/color_red_f04c62"
+                android:textSize="@dimen/text_size_17"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/add_buddy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@drawable/nim_team_create_btn_selector"
+                android:minHeight="50dp"
+                android:text="@string/add_friend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

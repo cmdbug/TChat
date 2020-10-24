@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/rts_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/bubble_layout_margin_side"
+        android:autoLink="phone|email"
+        android:drawableLeft="@drawable/icon_rts_send"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical|left"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="3dip"
+        android:maxWidth="@dimen/max_bubble_width"
+        android:textColor="@color/color_black_333333"
+        android:textSize="16sp"/>
+</merge>

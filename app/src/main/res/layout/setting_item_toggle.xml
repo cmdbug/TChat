@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/isetting_item_height"
+    android:background="@drawable/nim_semitransparency_selector"
+    android:paddingLeft="@dimen/isetting_item_padding_left"
+    android:paddingRight="@dimen/isetting_item_padding_right" >
+
+    <ImageView
+        android:id="@+id/settings_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="44dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dip"
+        android:contentDescription="@string/empty"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/settings_item_icon"
+        android:textColor="@color/color_black_ff333333"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/settings_item_icon" >
+
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_ff333333"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/device_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/device_name"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+        android:id="@+id/head_image"
+        android:layout_width="@dimen/avatar_size_default"
+        android:layout_height="@dimen/avatar_size_default"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/setting_item_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="44dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/empty"
+        android:scaleType="center"
+        android:visibility="gone" />
+
+    <com.netease.nim.uikit.common.ui.widget.SwitchButton
+        android:id="@+id/setting_item_toggle"
+        android:layout_width="58dip"
+        android:layout_height="36.67dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/horizontal_light_thin_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/settings_item_icon" />
+
+</RelativeLayout>

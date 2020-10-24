@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/isetting_item_padding_left"
+    android:paddingRight="@dimen/isetting_item_padding_right">
+
+    <LinearLayout
+        android:id="@+id/time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/start_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/start_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_from"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/start_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/time_from_default"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View style="@style/horizontal_light_thin_divider" />
+
+        <RelativeLayout
+            android:id="@+id/end_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/end_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_to"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/end_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/time_to_default"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View style="@style/horizontal_light_thin_divider" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_disturb_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="10dip"
+        android:text="@string/no_disturb_tips"
+        android:textSize="15sp" />
+
+</LinearLayout>

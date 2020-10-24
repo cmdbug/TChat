@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    tools:context="com.netease.nim.demo.test.AddBuddyActivity">
+
+    <EditText
+        android:id="@+id/account_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入帐号"/>
+
+    <EditText
+        android:id="@+id/nick_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入昵称"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:onClick="onClick"/>
+
+</LinearLayout>

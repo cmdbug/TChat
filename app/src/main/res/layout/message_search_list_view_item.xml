@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg_selecter"
+    android:minHeight="72dip" >
+
+    <FrameLayout
+        android:id="@+id/portrait_panel"
+        android:layout_width="70dip"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" >
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/img_head"
+            android:layout_width="@dimen/avatar_size_in_session"
+            android:layout_height="@dimen/avatar_size_in_session"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="12dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="16dip"
+        android:layout_toRightOf="@id/portrait_panel"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="@color/grey"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/img_msg_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nick_name"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/portrait_panel"
+        android:contentDescription="@string/empty"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nick_name"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/img_msg_status"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_aaaaaa_content_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="16dip"
+        android:textColor="@color/color_aaaaaa_content_text"
+        android:textSize="@dimen/text_small_size_ten_sp" />
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_one_pixels"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dip"
+        android:layout_toRightOf="@id/portrait_panel"
+        android:background="@color/split_line_grey_color_d9d9d9" />
+
+</RelativeLayout>

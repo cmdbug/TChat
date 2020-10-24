@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/large_size_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/notificationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:shadowColor="@color/video_call_peer_close_cameral_text_shadow"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="@color/video_call_peer_close_cameral_text_color"
+        android:textSize="16sp"
+        android:background="@drawable/avchat_call_bg" />
+
+    <FrameLayout
+        android:id="@+id/small_size_preview_layout"
+        android:layout_width="64dp"
+        android:layout_height="98dp"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="18dp">
+
+        <LinearLayout
+            android:id="@+id/small_size_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/smallSizePreviewCoverImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/avchat_close_video_send"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

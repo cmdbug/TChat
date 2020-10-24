@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editTextBodyLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:background="#f6f6f6"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    >
+    <EditText
+        android:id="@+id/circleEt"
+        style="@style/edit_text_style"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/bottom_component_margin_horizontal"
+        android:background="@drawable/wzt_chat_edittext_selecter"
+        android:maxHeight="72dip"
+        android:maxLines="4"
+        android:minHeight="35dp"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp"
+        android:hint="说点什么..."
+        />
+    <ImageView
+        android:id="@+id/sendIv"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="4dp"
+        android:contentDescription="@null"
+        android:background="@drawable/wzt_btn_bg_empty"
+        android:src="@drawable/friends_selector_send" />
+</LinearLayout>

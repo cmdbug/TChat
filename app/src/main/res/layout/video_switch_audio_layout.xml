@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/switch_mode_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+                android:clickable="true"
+                android:id="@+id/avchat_video_switch_audio"
+                android:descendantFocusability="blocksDescendants"
+                android:background="@drawable/video_audio_mode_switch_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <Button
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/avchat_switch_mode_audio_icon"
+                android:drawablePadding="5dip"
+                android:shadowColor="#353738"
+                android:shadowDy="-1"
+                android:shadowRadius="1"
+                android:text="@string/avchat_switch_to_audio"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="visible" />
+        <!--</FrameLayout>-->
+        </RelativeLayout>
+
+        <Chronometer
+            android:id="@+id/avchat_video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/avchat_video_netunstable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_mode_top_layout"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingBottom="8dip"
+        android:paddingLeft="11dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:shadowColor="#353738"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:text="@string/avchat_network_unstable_notificaton"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

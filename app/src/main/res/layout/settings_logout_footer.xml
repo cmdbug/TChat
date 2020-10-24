@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingLeft="@dimen/isetting_item_padding_left"
+    android:paddingRight="@dimen/isetting_item_padding_right"
+        >
+
+    <Button
+        android:id="@+id/settings_button_logout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/nim_red_round_button_selector"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

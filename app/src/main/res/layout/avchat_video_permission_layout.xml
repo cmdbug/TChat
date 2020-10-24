@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/avchat_permission_tip_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="未能开启摄像头"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/avchat_permission_tip_2"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="请至系统设置中打开此应用"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <TextView
+        android:id="@+id/avchat_permission_tip_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="的摄像头权限"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>

@@ -1,0 +1,167 @@
+apply plugin: 'com.android.application'
+
+def getGitVersion() {
+    try {
+        return 'git rev-parse --short HEAD'.execute().text.trim()
+    } catch (Throwable th) {
+        return "";
+    }
+}
+
+android {
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        applicationId "com.netease.nim.demo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        buildConfigField "String", "GIT_REVISION", "\"${getGitVersion()}\""
+        buildConfigField "String", "BUILD_DATE", "\"${new Date().toLocaleString()}\"";
+        multiDexEnabled true
+
+//        ndk {
+//            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+//        }
+        ndk {//为了减小体积只保留一个
+            abiFilters "armeabi-v7a"
+        }
+
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//            }
+//        }
+
+        manifestPlaceholders = [
+                JPUSH_APPKEY: "0974df477230750600272420", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug { storeFile file("debug.keystore") }
+
+        release {
+            storeFile file('release.keystore')
+            storePassword 'thisiskeystorepassword'
+            keyAlias 'nim_demo'
+            keyPassword 'thisiskeypassword'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            manifestPlaceholders = [AMAP_KEY: "09fd4efd3e28e9bf1f449ecec7d34bfe"]
+        }
+
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFile('proguard.cfg')
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [AMAP_KEY: "ee20324fba1c7f4ad7a4a207e7f08e8d"]
+        }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main']
+            aidl.srcDirs = ['src/main']
+            renderscript.srcDirs = ['src/main']
+            res.srcDirs = ['src/main/res', 'src/main/res-avchat', 'src/main/res-chatroom']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs', 'libs-sdk']
+
+        }
+
+    }
+
+    //aar配置
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        preDexLibraries false
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+//    externalNativeBuild {
+//        cmake {
+//            path 'CMakeLists.txt'
+//        }
+//    }
+
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(path: ':uikit')
+    compile(name: 'android-gif-drawable-1.2.5', ext: 'aar')
+
+    //朋友圈
+//    compile 'com.github.chrisbanes:PhotoView:1.3.0'//ucrop中已经有
+    //    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile('com.github.bumptech.glide:okhttp3-integration:1.4.0') {
+        exclude group: 'glide-parent'
+    }
+    //wzteng
+    compile project(path: ':ucrop')
+    compile project(path: ':picselector')
+    compile project(path: ':camera')
+    compile project(path: ':swipebackhelper')
+    compile project(path: ':qrcodecore')
+    compile project(path: ':awesomeqrcode')
+    compile project(path: ':recovery')
+    compile project(path: ':logreport')
+    compile project(path: ':Transferee')
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    //wzteng
+    compile 'com.netease.nimlib:jsbridge:1.3.1'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
+    compile 'com.malinskiy:superrecyclerview:1.1.4'
+    compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'pub.devrel:easypermissions:0.2.1'
+    testCompile 'junit:junit:4.12'
+    //ijkplayer
+//    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.1'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.1'
+    compile 'com.shuyu:gsyVideoPlayer-java:3.0.0'
+    compile 'com.shuyu:gsyVideoPlayer-armv7a:3.0.0'
+//    compile 'com.shuyu:gsyVideoPlayer-ex_so:3.0.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.google.code.gson:gson:2.8.2'
+    //jpush
+    compile 'cn.jiguang.sdk:janalytics:1.1.1'
+    compile 'cn.jiguang.sdk:jcore:1.1.2'
+
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/avchat_incoming_control"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+
+    <ImageView
+        android:id="@+id/avchat_switch_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/color_f2f7fc"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/avchat_switch_camera_bg" />
+
+
+    <ImageView
+        android:id="@+id/avchat_close_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/color_f2f7fc"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/avchat_close_camera_bg" />
+
+    <ImageView
+        android:id="@+id/avchat_video_mute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/color_f2f7fc"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/avchat_mute_bg" />
+
+    <ImageView
+        android:id="@+id/avchat_video_record"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/color_f2f7fc"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/avchat_video_record_selector" />
+
+    <ImageView
+        android:id="@+id/avchat_video_logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/avchat_logut_bg_selector"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/avchat_bottom_logout_selector" />
+
+</LinearLayout>

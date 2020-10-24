@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="load_end">No more data</string>
+    <string name="load_failed">load more failed</string>
+    <string name="loading">Loading...</string>
+</resources>

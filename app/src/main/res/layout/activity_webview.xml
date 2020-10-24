@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--app:titleTextAppearance="@style/Toolbar.TitleText">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FF3a9efb">
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:src="@drawable/webview_more_alpha" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="left"
+                android:padding="14dp"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:id="@+id/iv_stop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@+id/iv_close"
+                android:layout_toRightOf="@+id/iv_close"
+                android:padding="10dp"
+                android:src="@drawable/webview_close_alpha" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="标题"
+                android:layout_toLeftOf="@+id/iv_more"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/iv_stop" />
+
+        </RelativeLayout>
+
+        <!--</android.support.v7.widget.Toolbar>-->
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<com.netease.nim.demo.wzteng.others.webdowninfo.SlidingLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/slidingLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:background_view="@layout/activity_webview_bg"-->
+        <!--app:sliding_mode="top"-->
+        <!--app:top_max="150dp">-->
+
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/tencent_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--</com.netease.nim.demo.wzteng.others.webdowninfo.SlidingLayout>-->
+
+        <ProgressBar
+            android:id="@+id/pb_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/webview_progress_drawable" />
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,355 @@
+package com.netease.nim.demo.wzteng.friends.utils;
+
+import com.netease.nim.demo.wzteng.friends.bean.CircleItem;
+import com.netease.nim.demo.wzteng.friends.bean.CommentItem;
+import com.netease.nim.demo.wzteng.friends.bean.FavortItem;
+import com.netease.nim.demo.wzteng.friends.bean.PhotoInfo;
+import com.netease.nim.demo.wzteng.friends.bean.User;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+/**
+ * @author yiw
+ * @ClassName: DatasUtil
+ * @date 2015-12-28 下午4:16:21
+ */
+public class DatasUtil {
+    public static final String[] CONTENTS = {"",
+            "哈哈，18123456789,少数派  https://sspai.com/;一个不错的网站。哈哈，ChinaAr  http://www.ChinaAr.com;一" +
+                    "个不错的VR网站。哈哈，ChinaAr  http://www.ChinaAr.com;一个不错的VR网站。哈" +
+                    "哈，ChinaAr  http://www.ChinaAr.com;一个不错的VR网站。",
+            //"今天是个好日子，http://www.ChinaAr.com;一个不错的VR网站,18123456789,",
+            //"呵呵，http://www.ChinaAr.com;一个不错的VR网站,18123456789,",
+            //"只有http|https|ftp|svn://开头的网址才能识别为网址，正则表达式写的不太好，如果你又更好的正则表达式请评论告诉我，谢谢！",
+            "VR（Virtual Reality，即虚拟现实，简称VR），是由美国VPL公司创建人拉尼尔（Jaron Lanier）在20世纪80年代初" +
+                    "提出的。其具体内涵是：综合利用计算机图形系统和各种现实及控制等接口设备，在计算机上生成的、可交互" +
+                    "的三维环境中提供沉浸感觉的技术。其中，计算机生成的、可交互的三维环境称为虚拟环" +
+                    "境（即Virtual Environment，简称VE）。虚拟现实技术是一种可以创建和体验虚拟世界的计算机" +
+                    "仿真系统的技术。它利用计算机生成一种模拟环境，利用多源信息融合的交互式三维动态视景和实体" +
+                    "行为的系统仿真使用户沉浸到该环境中。",
+            //"哈哈哈哈",
+            //"图不错",
+            "我勒个去"};
+    /*public static final String[] PHOTOS = {
+            "http://f.hiphotos.baidu.com/image/pic/item/faf2b2119313b07e97f760d908d7912396dd8c9c.jpg",
+            "http://g.hiphotos.baidu.com/image/pic/item/4b90f603738da977c76ab6fab451f8198718e39e.jpg",
+            "http://e.hiphotos.baidu.com/image/pic/item/902397dda144ad343de8b756d4a20cf430ad858f.jpg",
+            "http://a.hiphotos.baidu.com/image/pic/item/a6efce1b9d16fdfa0fbc1ebfb68f8c5495ee7b8b.jpg",
+            "http://b.hiphotos.baidu.com/image/pic/item/a71ea8d3fd1f4134e61e0f90211f95cad1c85e36.jpg",
+            "http://c.hiphotos.baidu.com/image/pic/item/7dd98d1001e939011b9c86d07fec54e737d19645.jpg",
+            "http://f.hiphotos.baidu.com/image/pic/item/f11f3a292df5e0fecc3e83ef586034a85edf723d.jpg",
+            "http://cdn.duitang.com/uploads/item/201309/17/20130917111400_CNmTr.thumb.224_0.png",
+            "http://pica.nipic.com/2007-10-17/20071017111345564_2.jpg",
+            "http://pic4.nipic.com/20091101/3672704_160309066949_2.jpg",
+            "http://pic4.nipic.com/20091203/1295091_123813163959_2.jpg",
+            "http://pic31.nipic.com/20130624/8821914_104949466000_2.jpg",
+            "http://pic6.nipic.com/20100330/4592428_113348099353_2.jpg",
+            "http://pic9.nipic.com/20100917/5653289_174356436608_2.jpg",
+            "http://img10.3lian.com/sc6/show02/38/65/386515.jpg",
+            "http://pic1.nipic.com/2008-12-09/200812910493588_2.jpg",
+            "http://pic2.ooopic.com/11/79/98/31bOOOPICb1_1024.jpg" };*/
+    public static final String[] HEADIMG = {
+            "http://img2.woyaogexing.com/2018/01/23/72566db06b0e94e0!400x400_big.jpg",
+            "http://img2.woyaogexing.com/2018/01/20/f928af470b32deaa!400x400_big.jpg",
+            "http://v1.qzone.cc/avatar/201308/30/22/56/5220b2828a477072.jpg%21200x200.jpg",
+            "http://v1.qzone.cc/avatar/201308/22/10/36/521579394f4bb419.jpg!200x200.jpg",
+            "http://v1.qzone.cc/avatar/201408/20/17/23/53f468ff9c337550.jpg!200x200.jpg",
+            "http://cdn.duitang.com/uploads/item/201408/13/20140813122725_8h8Yu.jpeg",
+            "http://img.woyaogexing.com/touxiang/nv/20140212/9ac2117139f1ecd8%21200x200.jpg",
+            "http://p1.qqyou.com/touxiang/uploadpic/2013-3/12/2013031212295986807.jpg"};
+
+    public static List<User> users = new ArrayList<User>();
+    public static List<PhotoInfo> PHOTOS = new ArrayList<>();
+    /**
+     * 动态id自增长
+     */
+    private static int circleId = 0;
+    /**
+     * 点赞id自增长
+     */
+    private static int favortId = 0;
+    /**
+     * 评论id自增长
+     */
+    private static int commentId = 0;
+    public static final User curUser = new User("0", "自己", HEADIMG[0]);
+
+    static {
+        User user1 = new User("1", "张三", HEADIMG[1]);
+        User user2 = new User("2", "李四", HEADIMG[2]);
+        User user3 = new User("3", "隔壁老王", HEADIMG[3]);
+        User user4 = new User("4", "赵六", HEADIMG[4]);
+        User user5 = new User("5", "小姐姐", HEADIMG[5]);
+        User user6 = new User("6", "WZTENG", HEADIMG[6]);
+        User user7 = new User("7", "这个名字是不是很长，哈哈！因为我是用来测试换行的", HEADIMG[7]);
+
+        users.add(curUser);
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
+        users.add(user4);
+        users.add(user5);
+        users.add(user6);
+        users.add(user7);
+
+        PhotoInfo p1 = new PhotoInfo();
+        p1.url = "http://f.hiphotos.baidu.com/image/pic/item/faf2b2119313b07e97f760d908d7912396dd8c9c.jpg";
+        p1.w = 640;
+        p1.h = 792;
+
+        PhotoInfo p2 = new PhotoInfo();
+        p2.url = "http://g.hiphotos.baidu.com/image/pic/item/4b90f603738da977c76ab6fab451f8198718e39e.jpg";
+        p2.w = 640;
+        p2.h = 792;
+
+        PhotoInfo p3 = new PhotoInfo();
+        p3.url = "http://e.hiphotos.baidu.com/image/pic/item/902397dda144ad343de8b756d4a20cf430ad858f.jpg";
+        p3.w = 950;
+        p3.h = 597;
+
+        PhotoInfo p4 = new PhotoInfo();
+        p4.url = "http://a.hiphotos.baidu.com/image/pic/item/a6efce1b9d16fdfa0fbc1ebfb68f8c5495ee7b8b.jpg";
+        p4.w = 533;
+        p4.h = 800;
+
+        PhotoInfo p5 = new PhotoInfo();
+        p5.url = "http://b.hiphotos.baidu.com/image/pic/item/a71ea8d3fd1f4134e61e0f90211f95cad1c85e36.jpg";
+        p5.w = 700;
+        p5.h = 467;
+
+        PhotoInfo p6 = new PhotoInfo();
+        p6.url = "http://c.hiphotos.baidu.com/image/pic/item/7dd98d1001e939011b9c86d07fec54e737d19645.jpg";
+        p6.w = 700;
+        p6.h = 467;
+
+        PhotoInfo p7 = new PhotoInfo();
+        p7.url = "http://pica.nipic.com/2007-10-17/20071017111345564_2.jpg";
+        p7.w = 1024;
+        p7.h = 640;
+
+        PhotoInfo p8 = new PhotoInfo();
+        p8.url = "http://pic4.nipic.com/20091101/3672704_160309066949_2.jpg";
+        p8.w = 1024;
+        p8.h = 768;
+
+        PhotoInfo p9 = new PhotoInfo();
+        p9.url = "http://pic4.nipic.com/20091203/1295091_123813163959_2.jpg";
+        p9.w = 1024;
+        p9.h = 640;
+
+        PhotoInfo p10 = new PhotoInfo();
+        p10.url = "http://pic31.nipic.com/20130624/8821914_104949466000_2.jpg";
+        p10.w = 1024;
+        p10.h = 768;
+
+        PHOTOS.add(p1);
+        PHOTOS.add(p2);
+        PHOTOS.add(p3);
+        PHOTOS.add(p4);
+        PHOTOS.add(p5);
+        PHOTOS.add(p6);
+        PHOTOS.add(p7);
+        PHOTOS.add(p8);
+        PHOTOS.add(p9);
+        PHOTOS.add(p10);
+    }
+
+    public static List<CircleItem> createCircleDatas() {
+        List<CircleItem> circleDatas = new ArrayList<CircleItem>();
+        for (int i = 0; i < 15; i++) {
+            CircleItem item = new CircleItem();
+            User user = getUser();
+            item.setId(String.valueOf(circleId++));
+            item.setUser(user);
+            item.setContent(getContent());
+            item.setCreateTime("04月11日");
+
+            item.setFavorters(createFavortItemList());
+            item.setComments(createCommentItemList());
+            int type = getRandomNum(4);
+            if (type == 0) {
+                int y = getRandomNum(2);
+                if (y == 0) {
+                    item.setType("1");// 链接
+                    item.setLinkImg("https://zkres3.myzaker.com/201710/59df32891bc8e0f771000001_640.jpg");
+                    item.setLinkTitle("爬虫后会在这显示标题");
+                    item.setLinkUrl("http://www.baidu.com");
+                } else {
+                    item.setType("1");// 链接
+                    item.setLinkImg("https://zkres3.myzaker.com/201710/59df32891bc8e0f771000001_640.jpg");
+                    item.setLinkTitle("爬虫后会在这显示标题");
+                    item.setLinkUrl("http://www.qq.com");
+                }
+            } else if (type == 1) {
+                item.setType("2");// 图片
+                item.setPhotos(createPhotos());
+            } else if (type == 2) {
+                item.setType("3");// 视频
+                int x = getRandomNum(2);
+                String videoUrl;
+                String videoImgUrl;
+                String videoTitle;
+                if (x == 0) {
+                    videoUrl = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
+                    videoImgUrl = "http://t2.hddhhn.com/uploads/tu/201801/9999/efeb558f0a.jpg";
+                    videoTitle = "深圳市绿色低碳科技促进会";
+                } else {
+                    videoUrl = "http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4";
+                    videoImgUrl = "http://t2.hddhhn.com/uploads/tu/201801/9999/2a09f53634.jpg";
+                    videoTitle = "TED 演讲";
+                }
+                item.setVideoUrl(videoUrl);
+                item.setVideoImgUrl(videoImgUrl);
+                item.setVideoTitle(videoTitle);
+            } else if (type == 3) {
+                item.setType("4");//音乐
+                item.setMusicTitle("随机音乐，看你听不听");
+                item.setMusicArtist("不知道谁唱的");
+                item.setMusicAlbum("https://img.tulaoshi.com/image/20160405/f38ee26848e75297169b877be4a91cf4.jpg");
+            }
+            circleDatas.add(item);
+        }
+
+        return circleDatas;
+    }
+
+    public static User getUser() {
+        return users.get(getRandomNum(users.size()));
+    }
+
+    public static String getContent() {
+        return CONTENTS[getRandomNum(CONTENTS.length)];
+    }
+
+    public static int getRandomNum(int max) {
+        Random random = new Random();
+        int result = random.nextInt(max);
+        return result;
+    }
+
+    public static List<PhotoInfo> createPhotos() {
+        List<PhotoInfo> photos = new ArrayList<PhotoInfo>();
+        int size = getRandomNum(PHOTOS.size());
+        if (size > 0) {
+            if (size > 9) {
+                size = 9;
+            }
+            for (int i = 0; i < size; i++) {
+                PhotoInfo photo = PHOTOS.get(getRandomNum(PHOTOS.size()));
+                if (!photos.contains(photo)) {
+                    photos.add(photo);
+                } else {
+                    i--;
+                }
+            }
+        }
+        return photos;
+    }
+
+    public static List<FavortItem> createFavortItemList() {
+        int size = getRandomNum(users.size());
+        List<FavortItem> items = new ArrayList<FavortItem>();
+        List<String> history = new ArrayList<String>();
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                FavortItem newItem = createFavortItem();
+                String userid = newItem.getUser().getId();
+                if (!history.contains(userid)) {
+                    items.add(newItem);
+                    history.add(userid);
+                } else {
+                    i--;
+                }
+            }
+        }
+        return items;
+    }
+
+    public static FavortItem createFavortItem() {
+        FavortItem item = new FavortItem();
+        item.setId(String.valueOf(favortId++));
+        item.setUser(getUser());
+        return item;
+    }
+
+    public static FavortItem createCurUserFavortItem() {
+        FavortItem item = new FavortItem();
+        item.setId(String.valueOf(favortId++));
+        item.setUser(curUser);
+        return item;
+    }
+
+    public static List<CommentItem> createCommentItemList() {
+        List<CommentItem> items = new ArrayList<CommentItem>();
+        int size = getRandomNum(10);
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                items.add(createComment());
+            }
+        }
+        return items;
+    }
+
+    public static CommentItem createComment() {
+        CommentItem item = new CommentItem();
+        item.setId(String.valueOf(commentId++));
+        item.setContent("哈哈");
+        User user = getUser();
+        item.setUser(user);
+        if (getRandomNum(10) % 2 == 0) {
+            while (true) {
+                User replyUser = getUser();
+                if (!user.getId().equals(replyUser.getId())) {
+                    item.setToReplyUser(replyUser);
+                    break;
+                }
+            }
+        }
+        return item;
+    }
+
+    /**
+     * 创建发布评论
+     *
+     * @return
+     */
+    public static CommentItem createPublicComment(String content) {
+        CommentItem item = new CommentItem();
+        item.setId(String.valueOf(commentId++));
+        item.setContent(content);
+        item.setUser(curUser);
+        return item;
+    }
+
+    /**
+     * 创建回复评论
+     *
+     * @return
+     */
+    public static CommentItem createReplyComment(User replyUser, String content) {
+        CommentItem item = new CommentItem();
+        item.setId(String.valueOf(commentId++));
+        item.setContent(content);
+        item.setUser(curUser);
+        item.setToReplyUser(replyUser);
+        return item;
+    }
+
+
+    public static CircleItem createVideoItem(String videoUrl, String imgUrl) {
+        CircleItem item = new CircleItem();
+        item.setId(String.valueOf(circleId++));
+        item.setUser(curUser);
+        //item.setContent(getContent());
+        item.setCreateTime("04月11日");
+
+        //item.setFavorters(createFavortItemList());
+        //item.setComments(createCommentItemList());
+        item.setType("3");// 图片
+        item.setVideoUrl(videoUrl);
+        item.setVideoImgUrl(imgUrl);
+        return item;
+    }
+}

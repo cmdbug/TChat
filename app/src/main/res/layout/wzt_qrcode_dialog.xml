@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_qrcode_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/lucky_money_dark_gold_close_btn" />
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/iv_qrcode_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/avatar_def" />
+
+        <TextView
+            android:id="@+id/tv_qrcode_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_toRightOf="@id/iv_qrcode_avatar"
+            android:singleLine="true"
+            android:text="昵称"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_qrcode_sex"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_toRightOf="@id/tv_qrcode_name"
+            android:layout_centerHorizontal="false"
+            android:padding="0dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_sex_male" />
+
+        <TextView
+            android:id="@+id/tv_qrcode_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_qrcode_name"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_qrcode_avatar"
+            android:singleLine="true"
+            android:visibility="invisible"
+            android:text="个性签名"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_qrcode_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/tv_qrcode_about"
+            android:layout_centerHorizontal="true"
+            android:padding="0dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_qrcode_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_qrcode_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"
+            android:text="扫一扫上面的二维码，加我藤信"
+            android:textColor="#AAAAAA"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

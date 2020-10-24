@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/custom_dialog_message_text_style"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:id="@+id/select_dialog_item_view"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/select_dialog_text_view"
+        android:layout_width="wrap_content"
+        android:text="语音对话"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/color_black_333333"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/select_dialog_image_view"
+        android:src="@drawable/multi_select_switch_bg_selector"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

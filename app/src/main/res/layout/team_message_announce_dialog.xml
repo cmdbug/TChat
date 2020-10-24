@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/float_annourcement_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:orientation="vertical"
+              android:overScrollMode="never"
+              android:scrollbars="none">
+
+    <View
+        android:id="@+id/announce_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/transparent"
+        />
+
+    <LinearLayout
+        android:background="@drawable/nim_message_activity_top_tip"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/annourcement_vp"
+            android:layout_width="match_parent"
+            android:layout_height="174.0dip"
+            android:layout_marginTop="10.0dip"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+        <LinearLayout
+            android:id="@+id/annourcement_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="12.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

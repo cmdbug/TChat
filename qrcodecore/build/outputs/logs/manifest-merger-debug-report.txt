@@ -1,0 +1,23 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml:1:1-52
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml:1:1-52
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml:1:1-52
+	package
+		ADDED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml:1:11-50
+		INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+		INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+uses-sdk
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+		ADDED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+		INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+		ADDED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml
+		INJECTED from E:\IDEAWorkspace\nim_demo\qrcodecore\src\main\AndroidManifest.xml

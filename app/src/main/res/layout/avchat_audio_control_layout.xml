@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:descendantFocusability="beforeDescendants"
+            android:id="@+id/avchat_audio_mute"
+            android:clickable="true"
+            android:background="@drawable/avchat_mute_speaker_bg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:clickable="false"
+                android:drawableLeft="@drawable/avchat_mute_icon_selector"
+                android:drawablePadding="8dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="静音"
+                android:textColor="@drawable/avchat_audio_call_text_color_selector"
+                android:textSize="17sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:descendantFocusability="beforeDescendants"
+            android:id="@+id/avchat_audio_speaker"
+            android:clickable="true"
+            android:background="@drawable/avchat_mute_speaker_bg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:clickable="false"
+                android:drawableLeft="@drawable/avchat_speaker_icon_selector"
+                android:drawablePadding="8dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扬声器"
+                android:textColor="@drawable/avchat_audio_call_text_color_selector"
+                android:textSize="17sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:descendantFocusability="beforeDescendants"
+            android:id="@+id/avchat_audio_record"
+            android:background="@drawable/avchat_mute_speaker_bg"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/avchat_audio_record_button"
+                android:drawableLeft="@drawable/avchat_audio_record_icon_selector"
+                android:clickable="false"
+                android:drawablePadding="8dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="录制"
+                android:textColor="@drawable/avchat_audio_call_text_color_selector"
+                android:textSize="17sp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/avchat_audio_hangup"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="@string/avchat_hangup"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:background="@drawable/avchat_refuse_bg_selector"
+            android:visibility="visible"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

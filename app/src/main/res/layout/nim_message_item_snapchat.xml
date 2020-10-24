@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/message_item_snap_chat_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/message_item_snap_chat_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:padding="0dip"
+            android:scaleType="centerCrop" />
+
+        <include layout="@layout/nim_message_item_thumb_progress_bar_text" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_item_tips_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/message_item_snap_chat_readed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/message_item_snap_chat_tips_label"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="3dp"
+            android:background="@color/transparent"
+            android:text="@string/readed"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/message_item_snap_chat_tips_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_item_snap_chat_readed"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingBottom="3dp"
+            android:text="@string/snapchat_longclick_to_view"
+            android:textColor="#666666"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

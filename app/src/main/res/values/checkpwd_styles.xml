@@ -1,0 +1,35 @@
+<resources>
+    
+      <!--  这个是加入的代码 -->
+  <style name="mypopwindow_anim_style">
+    <item name="android:windowEnterAnimation">@anim/checkpwd_popshow_anim</item>
+ <!-- 指定显示的动画xml -->
+
+    <item name="android:windowExitAnimation">@anim/checkpwd_pophidden_anim</item>
+ <!-- 指定消失的动画xml -->
+  </style>
+  
+     <style name="InputGroupCodeViewNumber" parent="AppTheme">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="InputGroupCodeViewLine" parent="AppTheme">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/dark_gray</item>
+    </style>
+    
+     <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/checkpwd_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/checkpwd_popup_out</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/checkpwd_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/checkpwd_popup_out</item>
+    </style>
+
+</resources>
